@@ -1,5 +1,6 @@
 
-# Backend Role-Based Access Control (RBAC)
+# Backend Role-Based Access Control (RBAC) Assingment for VRV Security
+Added description along with instructions to access and test it
 
 A backend project implementing Role-Based Access Control (RBAC) using Node.js, Express, and MongoDB. This project provides user authentication, role-based authorization, and secure access to resources.
 
