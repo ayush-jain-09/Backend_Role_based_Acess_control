@@ -23,22 +23,22 @@ A backend project implementing Role-Based Access Control (RBAC) using Node.js, E
 
 ## Installation
 
-1. Clone the repository:
+###1. Clone the repository:
 
 ```bash
  git clone https://github.com/ayush-jain-09/Backend_Role_based_Acess_control.git
 ```
-2. Navigate to the project directory:
+###2. Navigate to the project directory:
 
 ```bash
  cd Backend_Role_based_Acess_control
 ```
-3. Install dependencies:
+###3. Install dependencies:
 
 ```bash
 npm install
 ```
-4. Set up environment variables:
+###4. Set up environment variables:
 
 Create a .env file in the root directory.
 
@@ -48,7 +48,7 @@ PORT=7002
 MONGO_URI=your_mongo_connection_string
 JWT_SECRET=your_secret_key
 ```
-5. Run the server:
+###5. Run the server:
 
 ```bash
 npm run dev
@@ -59,8 +59,8 @@ The server will start on http://localhost:7002.
 
 Base URL: 
 For local development: http://localhost:7002
-Authentication Routes
-1. Register a User
+###Authentication Routes
+####1. Register a User
 
 URL: /api/auth/register
 
@@ -92,7 +92,7 @@ Response (Error):
 }
 ```
 
-2. Login a User
+####2. Login a User
 URL: /api/auth/login
 
 Method: POST
@@ -119,8 +119,8 @@ Response (Error):
 }
 ```
 
-Role-Based Routes
-1. Admin Route
+###Role-Based Routes
+####1. Admin Route
 URL: /api/users/admin
 
 Method: GET
@@ -144,7 +144,7 @@ Response (Error):
 }
 ```
 
-2. Manager Route
+####2. Manager Route
 URL: /api/users/manager
 
 Method: GET
@@ -168,7 +168,7 @@ Response (Error):
 }
 ```
 
-3. User Route
+####3. User Route
 URL: /api/users/user
 
 Method: GET
@@ -192,7 +192,7 @@ Response (Error):
 }
 ```
 
-Common Error Responses
+####Common Error Responses
 
 401 Unauthorized:
 ```
@@ -221,3 +221,31 @@ Common Error Responses
 "message": "Something went wrong"
 }
 ```
+## API Reference
+
+####  Register a new user
+
+```http
+POST /api/auth/register
+```
+#### User login (returns JWT)
+
+```http
+  POST /api/auth/login
+  ```
+  #### Admin-only route
+
+```http
+  GET /api/users/admin
+  ```
+  #### Accessible by Admin & Manager
+
+```http
+ GET /api/users/manager
+  ```
+  #### Accessible by Admin, Manager & User
+
+```http
+ GET /api/users/user
+  ```
+
