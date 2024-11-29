@@ -58,13 +58,14 @@ The server will start on http://localhost:7002.
 
 Base URL: 
 For local development: http://localhost:7002
-Authentication Routes
-1. Register a User
 
-URL: /api/auth/register
+#### Authentication Routes
+#### 1. Register a User
 
-Method: POST
-
+URL:
+```
+POST  /api/auth/register
+```
 Description: Registers a new user with a username, password, and role.
 
 Request Body:
@@ -91,11 +92,11 @@ Response (Error):
 }
 ```
 
-2. Login a User
-URL: /api/auth/login
-
-Method: POST
-
+#### 2. Login a User
+URL:
+```
+POST /api/auth/login
+```
 Description: Authenticates a user and returns a JWT token.
 
 Request Body:
@@ -118,11 +119,12 @@ Response (Error):
 }
 ```
 
-Role-Based Routes
-1. Admin Route
-URL: /api/users/admin
-
-Method: GET
+#### Role-Based Routes
+#### 1. Admin Route
+URL: 
+```
+GET  /api/users/admin
+```
 
 Description: Accessible only to users with the admin role.
 
@@ -143,10 +145,11 @@ Response (Error):
 }
 ```
 
-2. Manager Route
-URL: /api/users/manager
-
-Method: GET
+#### 2. Manager Route
+URL: 
+```
+GET  /api/users/manager
+```
 
 Description: Accessible to users with either admin or manager roles.
 
@@ -167,10 +170,11 @@ Response (Error):
 }
 ```
 
-3. User Route
-URL: /api/users/user
-
-Method: GET
+#### 3. User Route
+URL: 
+```
+GET  /api/users/user
+```
 
 Description: Accessible to users with roles admin, manager, or user.
 
@@ -191,7 +195,7 @@ Response (Error):
 }
 ```
 
-Common Error Responses
+#### Common Error Responses
 
 401 Unauthorized:
 ```
@@ -220,33 +224,7 @@ Common Error Responses
 "message": "Something went wrong"
 }
 ```
-## API Reference
 
-####  Register a new user
-
-```http
-POST /api/auth/register
-```
-#### User login (returns JWT)
-
-```http
-  POST /api/auth/login
-  ```
-  #### Admin-only route
-
-```http
-  GET /api/users/admin
-  ```
-  #### Accessible by Admin & Manager
-
-```http
- GET /api/users/manager
-  ```
-  #### Accessible by Admin, Manager & User
-
-```http
- GET /api/users/user
-  ```
 
 
 
